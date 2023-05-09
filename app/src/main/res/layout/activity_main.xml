@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listView_wishList"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/infoMenu_layout"
+        android:layout_margin="10dp"
+    />
+    <RelativeLayout
+        android:id="@+id/infoMenu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#9A9A9A"
+        >
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <RadioButton
+                android:id="@+id/radio_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD"
+                android:checked="true"
+                android:textColor="@color/black"/>
+            <RadioButton
+                android:id="@+id/radio_eur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:checked="false"
+                android:textColor="@color/black"/>
+            <RadioButton
+                android:id="@+id/radio_azn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AZN"
+                android:checked="false"
+                android:textColor="@color/black"/>
+
+        </RadioGroup>
+        <TextView
+            android:id="@+id/total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/totalNum_text"
+            android:layout_alignBottom="@id/totalNum_text"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="Total: "
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/totalNum_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@id/totalCurrency_text"
+            android:layout_alignBaseline="@id/totalCurrency_text"
+            android:textSize="24sp"
+            android:text="0"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/totalCurrency_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_group"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_alignParentEnd="true"
+            android:text="USD"
+            android:layout_marginEnd="10dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
